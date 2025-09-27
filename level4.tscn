@@ -77,7 +77,11 @@ tile_map_data = PackedByteArray("AABHACUAAwAAAAAAAABGACUAAwAAAAAAAABFACUAAwAAAAA
 tile_set = SubResource("TileSet_7lf1v")
 
 [node name="Player" parent="." instance=ExtResource("5_pklw6")]
+<<<<<<< Updated upstream
 position = Vector2(-313, 167)
+=======
+z_index = -1
+>>>>>>> Stashed changes
 
 [node name="Background" type="Sprite2D" parent="Player"]
 z_index = -1

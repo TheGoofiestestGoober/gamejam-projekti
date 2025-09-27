@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dj6mowxppks5q"]
+[gd_scene load_steps=26 format=4 uid="uid://dj6mowxppks5q"]
 
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="1_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://c6djs1ujwu23n" path="res://assets/lockbox.png" id="2_crycw"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://t3qxj21s5qee" path="res://area_2d.gd" id="8_xy4tn"]
 [ext_resource type="Texture2D" uid="uid://kbmlnje6jgau" path="res://assets/tree.png" id="9_eqrsh"]
 [ext_resource type="Texture2D" uid="uid://gfesdyh3u6ro" path="res://assets/level 2 grund.png" id="10_3l65w"]
+[ext_resource type="Texture2D" uid="uid://l6nrc0rw4a8e" path="res://assets/Background.png" id="12_n8vhr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5j5gb"]
 texture = ExtResource("1_v8kj3")
@@ -87,6 +88,11 @@ tile_set = SubResource("TileSet_3l65w")
 
 [node name="Player" parent="." instance=ExtResource("7_xy4tn")]
 position = Vector2(-304, 243)
+
+[node name="Background" type="Sprite2D" parent="Player"]
+z_index = -1
+position = Vector2(276, 349)
+texture = ExtResource("12_n8vhr")
 
 [node name="Area2D" type="Area2D" parent="." groups=["transfer"]]
 position = Vector2(990, 338)
