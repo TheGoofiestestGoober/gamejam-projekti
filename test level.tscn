@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=4 uid="uid://d36hl46qcvceo"]
+
+[ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_27h24"]
+[ext_resource type="Texture2D" uid="uid://yh4itcp3r0fd" path="res://assets/Lava.png" id="2_w61ww"]
+[ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="3_qurlj"]
+[ext_resource type="Texture2D" uid="uid://dj1bf6jhw7aay" path="res://icon.svg" id="4_t65x8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fv1qw"]
+texture = ExtResource("1_27h24")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_87u8j"]
+texture = ExtResource("2_w61ww")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d40j3"]
+texture = ExtResource("3_qurlj")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_u6tox"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_fv1qw")
+sources/1 = SubResource("TileSetAtlasSource_87u8j")
+sources/2 = SubResource("TileSetAtlasSource_d40j3")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avjxg"]
+size = Vector2(12, 11)
+
+[node name="Node" type="Node"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAATABgAAAAAAAAAAAAUABgAAAAAAAAAAAAVABgAAAAAAAAAAAAWABgAAAAAAAAAAAAXABgAAAAAAAAAAAAYABgAAAAAAAAAAAAZABgAAAAAAAAAAAAaABgAAAAAAAAAAAAbABgAAAAAAAAAAAAcABgAAAAAAAAAAAAdABgAAAAAAAAAAAAeABgAAAAAAAAAAAAfABgAAAAAAAAAAAAgABgAAAAAAAAAAAAhABgAAAAAAAAAAAAiABgAAAAAAAAAAAAjABgAAAAAAAAAAAAkABgAAAAAAAAAAAAlABgAAAAAAAAAAAAmABgAAAAAAAAAAAAnABgAAAAAAAAAAAAtABcAAQAAAAAAAAAsABcAAQAAAAAAAAArABcAAQAAAAAAAAAqABcAAQAAAAAAAAApABcAAQAAAAAAAAAoABYAAQAAAAAAAAAnABYAAQAAAAAAAAAmABYAAQAAAAAAAAAlABYAAQAAAAAAAAAkABcAAQAAAAAAAAAjABcAAQAAAAAAAAAiABcAAQAAAAAAAAAhABcAAQAAAAAAAAAgABcAAQAAAAAAAAAfABcAAQAAAAAAAAAeABcAAQAAAAAAAAAhABYAAQAAAAAAAAAiABYAAQAAAAAAAAAjABYAAQAAAAAAAAAkABYAAQAAAAAAAAAlABcAAQAAAAAAAAAmABcAAQAAAAAAAAAnABcAAQAAAAAAAAAoABcAAQAAAAAAAAAUABEAAAAAAAAAAAAVABEAAAAAAAAAAAAWABEAAAAAAAAAAAAXABEAAAAAAAAAAAAYABEAAAAAAAAAAAAZABAAAAAAAAAAAAAaABAAAAAAAAAAAAAbABAAAAAAAAAAAAAcABEAAAAAAAAAAAAdABEAAAAAAAAAAAAdABAAAAAAAAAAAAAeABAAAAAAAAAAAAAfABAAAAAAAAAAAAAfABEAAAAAAAAAAAAnABEAAAAAAAAAAAAoABEAAAAAAAAAAAANABkAAAAAAAAAAAAMABkAAAAAAAAAAAALABkAAAAAAAAAAAAKABkAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_u6tox")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(350.00003, 362)
+scale = Vector2(0.101562515, 0.078125075)
+texture = ExtResource("4_t65x8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(350, 362.5)
+shape = SubResource("RectangleShape2D_avjxg")
