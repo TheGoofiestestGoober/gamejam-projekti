@@ -21,6 +21,7 @@ texture = ExtResource("2_3mip4")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(358, 361)
 zoom = Vector2(2, 2)
+position_smoothing_enabled = true
 
 [node name="Background" type="Sprite2D" parent="Camera2D"]
 z_index = -5
