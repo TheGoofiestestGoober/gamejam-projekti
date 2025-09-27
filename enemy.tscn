@@ -27,7 +27,6 @@ position = Vector2(-11, -4)
 target_position = Vector2(0, 15)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-position = Vector2(7, 0)
 target_position = Vector2(-14, 0)
 
 [node name="RayCastDown2" type="RayCast2D" parent="."]
@@ -35,7 +34,7 @@ position = Vector2(8, -4)
 target_position = Vector2(0, 15)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-position = Vector2(-5, 0)
+position = Vector2(3, 0)
 target_position = Vector2(11, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
