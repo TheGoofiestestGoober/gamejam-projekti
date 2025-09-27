@@ -6,7 +6,9 @@ const JUMP_VELOCITY = -400.0
 
 var Sword_On_Cooldown = false
 
-
+func _ready():
+	$Sword.visible = false
+	$Sword/CollisionShape2D.disabled = true
 
 func die():
 	get_tree().reload_current_scene()
