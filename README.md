@@ -64,3 +64,5 @@ The Future of Gaming Starts Here
 Forget everything you’ve played before. The future of gaming is now, and it begins with Sacrifices Must Be Made. This is not just a game—it’s a revolution in how we think about video games. You’re not just playing a game. You’re experiencing the culmination of years of innovation, sacrifice, and creativity that will echo through the gaming industry for years to come.
 
 Step into a world where every choice matters. Step into a world where your actions shape the future. Step into Sacrifices Must Be Made, and see for yourself what true greatness looks like.
+
+🪟🪟🪟🪟🪟
