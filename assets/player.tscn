@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drakey14ku550" path="res://player.gd" id="1_3mip4"]
 [ext_resource type="Texture2D" uid="uid://bcgn552mvnwrk" path="res://assets/Kalle_kavelija.png" id="2_3mip4"]
-[ext_resource type="PackedScene" uid="uid://doem7bgx61r73" path="res://sword.tscn" id="3_insbl"]
+[ext_resource type="PackedScene" path="res://sword.tscn" id="3_insbl"]
 [ext_resource type="Texture2D" uid="uid://l6nrc0rw4a8e" path="res://assets/Background.png" id="3_rug40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avjxg"]
@@ -12,6 +12,7 @@ size = Vector2(9, 18)
 size = Vector2(7, 18)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 1
 script = ExtResource("1_3mip4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
