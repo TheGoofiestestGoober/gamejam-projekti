@@ -4,11 +4,16 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+
+
 var Sword_On_Cooldown = false
+
 
 func _ready():
 	$Sword.visible = false
 	$Sword/CollisionShape2D.disabled = true
+	
+
 
 func die():
 	get_tree().reload_current_scene()
@@ -32,8 +37,6 @@ func async_hide_sword() -> void:
 
 	await get_tree().create_timer(0.3).timeout
 	Sword_On_Cooldown = false
-	
-		
 	
 
 func _physics_process(delta: float) -> void:
