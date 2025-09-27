@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://uhg7rhgmxcvr"]
+[gd_scene load_steps=5 format=3 uid="uid://cxe8p1h70icgh"]
 
 [ext_resource type="Script" uid="uid://drakey14ku550" path="res://player.gd" id="1_3mip4"]
 [ext_resource type="Texture2D" uid="uid://bcgn552mvnwrk" path="res://assets/Kalle_kavelija.png" id="2_3mip4"]
-[ext_resource type="PackedScene" uid="uid://doem7bgx61r73" path="res://sword.tscn" id="3_insbl"]
+[ext_resource type="PackedScene" path="res://sword.tscn" id="3_insbl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avjxg"]
 size = Vector2(7, 18)
@@ -22,7 +22,6 @@ shape = SubResource("RectangleShape2D_avjxg")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(358, 361)
 zoom = Vector2(2, 2)
-position_smoothing_enabled = true
 
 [node name="Sword" parent="." instance=ExtResource("3_insbl")]
 position = Vector2(360, 362.5)

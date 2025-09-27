@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://d36hl46qcvceo"]
+[gd_scene load_steps=11 format=4 uid="uid://dqyi3qnk8ssk5"]
 
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_27h24"]
+[ext_resource type="Texture2D" uid="uid://l6nrc0rw4a8e" path="res://assets/Background.png" id="1_qurlj"]
 [ext_resource type="Texture2D" uid="uid://yh4itcp3r0fd" path="res://assets/Lava.png" id="2_w61ww"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="3_qurlj"]
-[ext_resource type="PackedScene" uid="uid://uhg7rhgmxcvr" path="res://assets/player.tscn" id="4_27h24"]
-[ext_resource type="PackedScene" uid="uid://7qqvhmtulr8c" path="res://enemy.tscn" id="5_w61ww"]
+[ext_resource type="PackedScene" uid="uid://cxe8p1h70icgh" path="res://assets/player.tscn" id="4_27h24"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="5_w61ww"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fv1qw"]
 texture = ExtResource("1_27h24")
@@ -27,13 +28,21 @@ sources/0 = SubResource("TileSetAtlasSource_fv1qw")
 sources/1 = SubResource("TileSetAtlasSource_87u8j")
 sources/2 = SubResource("TileSetAtlasSource_d40j3")
 
-[node name="Node" type="Node"]
+[node name="Node2" type="Node"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+show_behind_parent = true
+top_level = true
 tile_map_data = PackedByteArray("AAATABgAAAAAAAAAAAAUABgAAAAAAAAAAAAVABgAAAAAAAAAAAAWABgAAAAAAAAAAAAXABgAAAAAAAAAAAAYABgAAAAAAAAAAAAZABgAAAAAAAAAAAAaABgAAAAAAAAAAAAbABgAAAAAAAAAAAAcABgAAAAAAAAAAAAdABgAAAAAAAAAAAAeABgAAAAAAAAAAAAfABgAAAAAAAAAAAAgABgAAAAAAAAAAAAhABgAAAAAAAAAAAAiABgAAAAAAAAAAAAjABgAAAAAAAAAAAAkABgAAAAAAAAAAAAlABgAAAAAAAAAAAAmABgAAAAAAAAAAAAnABgAAAAAAAAAAAAtABcAAQAAAAAAAAAsABcAAQAAAAAAAAArABcAAQAAAAAAAAAqABcAAQAAAAAAAAApABcAAQAAAAAAAAAoABYAAQAAAAAAAAAnABYAAQAAAAAAAAAmABYAAQAAAAAAAAAlABYAAQAAAAAAAAAkABcAAQAAAAAAAAAjABcAAQAAAAAAAAAiABcAAQAAAAAAAAAhABcAAQAAAAAAAAAgABcAAQAAAAAAAAAfABcAAQAAAAAAAAAeABcAAQAAAAAAAAAhABYAAQAAAAAAAAAiABYAAQAAAAAAAAAjABYAAQAAAAAAAAAkABYAAQAAAAAAAAAlABcAAQAAAAAAAAAmABcAAQAAAAAAAAAnABcAAQAAAAAAAAAoABcAAQAAAAAAAAAUABEAAAAAAAAAAAAVABEAAAAAAAAAAAAWABEAAAAAAAAAAAAXABEAAAAAAAAAAAAYABEAAAAAAAAAAAAZABAAAAAAAAAAAAAaABAAAAAAAAAAAAAbABAAAAAAAAAAAAAcABEAAAAAAAAAAAAdABEAAAAAAAAAAAAdABAAAAAAAAAAAAAeABAAAAAAAAAAAAAfABAAAAAAAAAAAAAfABEAAAAAAAAAAAAnABEAAAAAAAAAAAAoABEAAAAAAAAAAAANABkAAAAAAAAAAAAMABkAAAAAAAAAAAALABkAAAAAAAAAAAAKABkAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_u6tox")
 
 [node name="Player" parent="." instance=ExtResource("4_27h24")]
 
+[node name="Background" type="Sprite2D" parent="Player"]
+z_index = -1
+position = Vector2(415, 326)
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("1_qurlj")
+
 [node name="Enemy" parent="." instance=ExtResource("5_w61ww")]
-position = Vector2(585, 337)
+position = Vector2(574, 337)
