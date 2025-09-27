@@ -88,16 +88,16 @@ position = Vector2(-308, 155)
 
 [node name="Enemy" parent="." instance=ExtResource("12_7lf1v")]
 z_index = 1
-position = Vector2(810, 530)
+position = Vector2(1029, 547)
 
 [node name="Enemy2" parent="." instance=ExtResource("12_7lf1v")]
 z_index = 1
-position = Vector2(717, 517)
+position = Vector2(725, 523)
 
 [node name="Enemy3" parent="." instance=ExtResource("12_7lf1v")]
 z_index = 1
-position = Vector2(697, 517)
+position = Vector2(201, 384)
 
 [node name="Enemy4" parent="." instance=ExtResource("12_7lf1v")]
 z_index = 1
-position = Vector2(760, 526)
+position = Vector2(688, 355)
