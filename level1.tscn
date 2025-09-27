@@ -89,6 +89,7 @@ tile_map_data = PackedByteArray("AAAAACgAAwAAAAAAAAABACgAAwAAAAAAAAACACgAAwAAAAA
 tile_set = SubResource("TileSet_3l65w")
 
 [node name="Player" parent="." instance=ExtResource("7_xy4tn")]
+z_index = 1
 position = Vector2(-304, 243)
 
 [node name="Background" type="Sprite2D" parent="Player"]

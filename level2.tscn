@@ -81,6 +81,7 @@ tile_map_data = PackedByteArray("AAABAAwAAQAAAAAAAAACAAwAAQAAAAAAAAADAAwAAQAAAAA
 tile_set = SubResource("TileSet_dc5vx")
 
 [node name="Player" parent="." instance=ExtResource("6_8i3m3")]
+z_index = 1
 position = Vector2(-288, -187)
 
 [node name="Area2D" type="Area2D" parent="." groups=["transfer"]]
