@@ -12,7 +12,9 @@ var Sword_On_Cooldown = false
 func _ready():
 	$Sword.visible = false
 	$Sword/CollisionShape2D.disabled = true
+
 	
+
 
 
 func die():
@@ -63,3 +65,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("hi")
+	if not area.is_in_group("transfer"):
+		print("hi")
+		die()
