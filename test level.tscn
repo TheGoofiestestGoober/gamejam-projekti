@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://d36hl46qcvceo"]
+[gd_scene load_steps=11 format=4 uid="uid://d36hl46qcvceo"]
 
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_27h24"]
 [ext_resource type="Texture2D" uid="uid://yh4itcp3r0fd" path="res://assets/Lava.png" id="2_w61ww"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="3_qurlj"]
 [ext_resource type="Texture2D" uid="uid://dj1bf6jhw7aay" path="res://icon.svg" id="4_t65x8"]
+[ext_resource type="Script" uid="uid://drakey14ku550" path="res://player.gd" id="4_w61ww"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fv1qw"]
 texture = ExtResource("1_27h24")
@@ -35,13 +36,19 @@ size = Vector2(12, 11)
 tile_map_data = PackedByteArray("AAATABgAAAAAAAAAAAAUABgAAAAAAAAAAAAVABgAAAAAAAAAAAAWABgAAAAAAAAAAAAXABgAAAAAAAAAAAAYABgAAAAAAAAAAAAZABgAAAAAAAAAAAAaABgAAAAAAAAAAAAbABgAAAAAAAAAAAAcABgAAAAAAAAAAAAdABgAAAAAAAAAAAAeABgAAAAAAAAAAAAfABgAAAAAAAAAAAAgABgAAAAAAAAAAAAhABgAAAAAAAAAAAAiABgAAAAAAAAAAAAjABgAAAAAAAAAAAAkABgAAAAAAAAAAAAlABgAAAAAAAAAAAAmABgAAAAAAAAAAAAnABgAAAAAAAAAAAAtABcAAQAAAAAAAAAsABcAAQAAAAAAAAArABcAAQAAAAAAAAAqABcAAQAAAAAAAAApABcAAQAAAAAAAAAoABYAAQAAAAAAAAAnABYAAQAAAAAAAAAmABYAAQAAAAAAAAAlABYAAQAAAAAAAAAkABcAAQAAAAAAAAAjABcAAQAAAAAAAAAiABcAAQAAAAAAAAAhABcAAQAAAAAAAAAgABcAAQAAAAAAAAAfABcAAQAAAAAAAAAeABcAAQAAAAAAAAAhABYAAQAAAAAAAAAiABYAAQAAAAAAAAAjABYAAQAAAAAAAAAkABYAAQAAAAAAAAAlABcAAQAAAAAAAAAmABcAAQAAAAAAAAAnABcAAQAAAAAAAAAoABcAAQAAAAAAAAAUABEAAAAAAAAAAAAVABEAAAAAAAAAAAAWABEAAAAAAAAAAAAXABEAAAAAAAAAAAAYABEAAAAAAAAAAAAZABAAAAAAAAAAAAAaABAAAAAAAAAAAAAbABAAAAAAAAAAAAAcABEAAAAAAAAAAAAdABEAAAAAAAAAAAAdABAAAAAAAAAAAAAeABAAAAAAAAAAAAAfABAAAAAAAAAAAAAfABEAAAAAAAAAAAAnABEAAAAAAAAAAAAoABEAAAAAAAAAAAANABkAAAAAAAAAAAAMABkAAAAAAAAAAAALABkAAAAAAAAAAAAKABkAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_u6tox")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("4_w61ww")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
 position = Vector2(350.00003, 362)
 scale = Vector2(0.101562515, 0.078125075)
 texture = ExtResource("4_t65x8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(350, 362.5)
 shape = SubResource("RectangleShape2D_avjxg")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(358, 361)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
