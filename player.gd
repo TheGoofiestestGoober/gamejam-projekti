@@ -8,10 +8,10 @@ const JUMP_VELOCITY = -400.0
 
 var Sword_On_Cooldown = false
 
-
-func _ready():
+func _ready() -> void:
 	$Sword.visible = false
-	$Sword/CollisionShape2D.disabled = true
+	$Sword/Area2D/CollisionShape2D.disabled = true
+
 
 	
 
@@ -24,18 +24,18 @@ func attack():
 	
 	if not Sword_On_Cooldown:
 		$Sword.visible = true
-		$Sword/CollisionShape2D.disabled = false
+		$Sword/Area2D/CollisionShape2D.disabled = false
 
 		await get_tree().create_timer(0.5).timeout
 
 		$Sword.visible = false
-		$Sword/CollisionShape2D.disabled = true
+		$Sword/Area2D/CollisionShape2D.disabled = true
 		Sword_On_Cooldown = true
 		async_hide_sword()
 func async_hide_sword() -> void:
 	await get_tree().create_timer(0.3).timeout
 	$Sword.visible = false
-	$Sword/CollisionShape2D.disabled = true
+	$Sword/Area2D/CollisionShape2D.disabled = true
 
 	await get_tree().create_timer(0.3).timeout
 	Sword_On_Cooldown = false
@@ -69,6 +69,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("hi")
-	if not area.is_in_group("transfer"):
+	if not area.is_in_group("transfer") and not area.is_in_group("sword"):
 		print("hi")
 		die()

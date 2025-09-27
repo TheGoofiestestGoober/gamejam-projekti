@@ -15,10 +15,10 @@ script = ExtResource("1_4gyqm")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qi2p4")
 
-[node name="Killarea" type="Area2D" parent="."]
+[node name="Killarea" type="Area2D" parent="." groups=["Enemy"]]
 position = Vector2(53, -10)
 
-[node name="EnemyHitbox" type="CollisionShape2D" parent="Killarea"]
+[node name="EnemyHitbox" type="CollisionShape2D" parent="Killarea" groups=["Enemy"]]
 position = Vector2(-53.5, 11)
 shape = SubResource("RectangleShape2D_iifgy")
 
@@ -41,3 +41,5 @@ target_position = Vector2(11, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_4gyqm")
+
+[connection signal="area_entered" from="Killarea" to="." method="_on_killarea_area_entered"]

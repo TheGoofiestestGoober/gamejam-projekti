@@ -5,10 +5,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4ynd"]
 size = Vector2(20, 11.332973)
 
-[node name="Sprite2D" type="Sprite2D"]
+[node name="Sprite2D" type="Sprite2D" groups=["sword"]]
 texture = ExtResource("1_74bdg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["sword"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["sword"]]
 position = Vector2(0, 1.3157222)
 scale = Vector2(0.7978443, 0.47371113)
 shape = SubResource("RectangleShape2D_e4ynd")
