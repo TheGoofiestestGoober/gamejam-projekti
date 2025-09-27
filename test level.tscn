@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://d36hl46qcvceo"]
+[gd_scene load_steps=10 format=4 uid="uid://d36hl46qcvceo"]
 
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_27h24"]
 [ext_resource type="Texture2D" uid="uid://yh4itcp3r0fd" path="res://assets/Lava.png" id="2_w61ww"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="3_qurlj"]
 [ext_resource type="PackedScene" uid="uid://uhg7rhgmxcvr" path="res://assets/player.tscn" id="4_27h24"]
+[ext_resource type="PackedScene" uid="uid://7qqvhmtulr8c" path="res://enemy.tscn" id="5_w61ww"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fv1qw"]
 texture = ExtResource("1_27h24")
@@ -33,3 +34,6 @@ tile_map_data = PackedByteArray("AAATABgAAAAAAAAAAAAUABgAAAAAAAAAAAAVABgAAAAAAAA
 tile_set = SubResource("TileSet_u6tox")
 
 [node name="Player" parent="." instance=ExtResource("4_27h24")]
+
+[node name="Enemy" parent="." instance=ExtResource("5_w61ww")]
+position = Vector2(585, 337)
