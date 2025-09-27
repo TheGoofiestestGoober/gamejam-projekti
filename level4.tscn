@@ -1,16 +1,15 @@
-[gd_scene load_steps=23 format=4 uid="uid://bmofka7b8mof0"]
+[gd_scene load_steps=22 format=4 uid="uid://cqk2v8wfaey3w"]
 
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_g1tnb"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="2_pklw6"]
 [ext_resource type="Texture2D" uid="uid://gfesdyh3u6ro" path="res://assets/level 2 grund.png" id="3_bp1i4"]
 [ext_resource type="Texture2D" uid="uid://kswvthnoec35" path="res://assets/deep_grund.png" id="4_bvvno"]
 [ext_resource type="Texture2D" uid="uid://2vcflied4f4y" path="res://assets/Sign.png" id="5_bvvno"]
-[ext_resource type="PackedScene" uid="uid://cxe8p1h70icgh" path="res://assets/player.tscn" id="5_pklw6"]
+[ext_resource type="PackedScene" uid="uid://uhg7rhgmxcvr" path="res://assets/player.tscn" id="5_pklw6"]
 [ext_resource type="Texture2D" uid="uid://5oebc87xc360" path="res://assets/Flower.png" id="6_yxclo"]
 [ext_resource type="Texture2D" uid="uid://bkapw3s44du3o" path="res://assets/heina.png" id="7_fx4lf"]
 [ext_resource type="Texture2D" uid="uid://kbmlnje6jgau" path="res://assets/tree.png" id="8_sx4db"]
 [ext_resource type="Texture2D" uid="uid://cdnqfoakthtk1" path="res://assets/Mushroom.png" id="9_fx4lf"]
-[ext_resource type="Texture2D" uid="uid://l6nrc0rw4a8e" path="res://assets/Background.png" id="11_sx4db"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4lsh"]
 texture = ExtResource("1_g1tnb")
@@ -77,8 +76,4 @@ tile_map_data = PackedByteArray("AABHACUAAwAAAAAAAABGACUAAwAAAAAAAABFACUAAwAAAAA
 tile_set = SubResource("TileSet_7lf1v")
 
 [node name="Player" parent="." instance=ExtResource("5_pklw6")]
-
-[node name="Background" type="Sprite2D" parent="Player"]
-z_index = -1
-position = Vector2(583, 362)
-texture = ExtResource("11_sx4db")
+position = Vector2(-308, 155)
