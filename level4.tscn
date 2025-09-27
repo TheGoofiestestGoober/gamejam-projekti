@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bmofka7b8mof0"]
+[gd_scene load_steps=25 format=4 uid="uid://bmofka7b8mof0"]
 
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_g1tnb"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="2_pklw6"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bkapw3s44du3o" path="res://assets/heina.png" id="7_fx4lf"]
 [ext_resource type="Texture2D" uid="uid://kbmlnje6jgau" path="res://assets/tree.png" id="8_sx4db"]
 [ext_resource type="Texture2D" uid="uid://cdnqfoakthtk1" path="res://assets/Mushroom.png" id="9_fx4lf"]
+[ext_resource type="PackedScene" uid="uid://7qqvhmtulr8c" path="res://enemy.tscn" id="12_7lf1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4lsh"]
 texture = ExtResource("1_g1tnb")
@@ -84,3 +85,19 @@ tile_set = SubResource("TileSet_7lf1v")
 
 [node name="Player" parent="." instance=ExtResource("5_pklw6")]
 position = Vector2(-308, 155)
+
+[node name="Enemy" parent="." instance=ExtResource("12_7lf1v")]
+z_index = 1
+position = Vector2(810, 530)
+
+[node name="Enemy2" parent="." instance=ExtResource("12_7lf1v")]
+z_index = 1
+position = Vector2(717, 517)
+
+[node name="Enemy3" parent="." instance=ExtResource("12_7lf1v")]
+z_index = 1
+position = Vector2(697, 517)
+
+[node name="Enemy4" parent="." instance=ExtResource("12_7lf1v")]
+z_index = 1
+position = Vector2(760, 526)

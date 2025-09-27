@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dymtynip8hdnf"]
+[gd_scene load_steps=24 format=4 uid="uid://dymtynip8hdnf"]
 
 [ext_resource type="Texture2D" uid="uid://cg4j3dpgurur7" path="res://deep_grund.png" id="1_8tcn8"]
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="2_r6vdu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://level2Transfer.gd" id="7_rmy57"]
 [ext_resource type="Texture2D" uid="uid://5oebc87xc360" path="res://assets/Flower.png" id="8_s8oj7"]
 [ext_resource type="Texture2D" uid="uid://kbmlnje6jgau" path="res://assets/tree.png" id="9_mw4xc"]
+[ext_resource type="PackedScene" uid="uid://7qqvhmtulr8c" path="res://enemy.tscn" id="12_dc5vx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rmy57"]
 texture = ExtResource("1_8tcn8")
@@ -81,7 +82,6 @@ tile_map_data = PackedByteArray("AAABAAwAAQAAAAAAAAACAAwAAQAAAAAAAAADAAwAAQAAAAA
 tile_set = SubResource("TileSet_dc5vx")
 
 [node name="Player" parent="." instance=ExtResource("6_8i3m3")]
-z_index = 1
 position = Vector2(-289, -188)
 
 [node name="Area2D" type="Area2D" parent="." groups=["transfer"]]
@@ -91,3 +91,23 @@ script = ExtResource("7_rmy57")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["transfer"]]
 position = Vector2(39.75, -6)
 shape = SubResource("RectangleShape2D_s8oj7")
+
+[node name="Enemy" parent="." instance=ExtResource("12_dc5vx")]
+z_index = 1
+position = Vector2(824, 16)
+
+[node name="Enemy2" parent="." instance=ExtResource("12_dc5vx")]
+z_index = 1
+position = Vector2(55, 356)
+
+[node name="Enemy3" parent="." instance=ExtResource("12_dc5vx")]
+z_index = 1
+position = Vector2(226, 275)
+
+[node name="Enemy4" parent="." instance=ExtResource("12_dc5vx")]
+z_index = 1
+position = Vector2(204, 365)
+
+[node name="Enemy5" parent="." instance=ExtResource("12_dc5vx")]
+z_index = 1
+position = Vector2(431, 394)

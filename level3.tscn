@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bme63xau32rb1"]
+[gd_scene load_steps=24 format=4 uid="uid://bme63xau32rb1"]
 
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_o2ccw"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="2_qrujo"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cdnqfoakthtk1" path="res://assets/Mushroom.png" id="8_ci4mn"]
 [ext_resource type="Script" uid="uid://djg4204j6a6wi" path="res://level3transition.gd" id="9_ci4mn"]
 [ext_resource type="Texture2D" uid="uid://h6b4dsqjgpad" path="res://assets/Streetlight.png" id="9_sotx7"]
+[ext_resource type="PackedScene" uid="uid://7qqvhmtulr8c" path="res://enemy.tscn" id="12_ymh28"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lcx6"]
 texture = ExtResource("1_o2ccw")
@@ -75,7 +76,6 @@ tile_map_data = PackedByteArray("AAAAABUABAAAAAAAAAABABUABAAAAAAAAAACABUABAAAAAA
 tile_set = SubResource("TileSet_mu84n")
 
 [node name="Player" parent="." instance=ExtResource("7_bmsap")]
-z_index = 1
 position = Vector2(-303, -68)
 
 [node name="Area2D" type="Area2D" parent="." groups=["transfer"]]
@@ -85,3 +85,27 @@ script = ExtResource("9_ci4mn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["transfer"]]
 position = Vector2(24, -5)
 shape = SubResource("RectangleShape2D_0m7xm")
+
+[node name="Enemy" parent="." instance=ExtResource("12_ymh28")]
+z_index = 1
+position = Vector2(612, 50)
+
+[node name="Enemy2" parent="." instance=ExtResource("12_ymh28")]
+z_index = 1
+position = Vector2(388, 434)
+
+[node name="Enemy3" parent="." instance=ExtResource("12_ymh28")]
+z_index = 1
+position = Vector2(897, 347)
+
+[node name="Enemy4" parent="." instance=ExtResource("12_ymh28")]
+z_index = 1
+position = Vector2(821, 113)
+
+[node name="Enemy5" parent="." instance=ExtResource("12_ymh28")]
+z_index = 1
+position = Vector2(801, 408)
+
+[node name="Enemy6" parent="." instance=ExtResource("12_ymh28")]
+z_index = 1
+position = Vector2(928, 200)
