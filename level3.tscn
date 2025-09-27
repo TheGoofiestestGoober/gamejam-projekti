@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cw4yu2irul0et"]
+[gd_scene load_steps=19 format=4 uid="uid://bme63xau32rb1"]
 
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_o2ccw"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="2_qrujo"]
@@ -7,9 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://kswvthnoec35" path="res://assets/deep_grund.png" id="5_rqrji"]
 [ext_resource type="Texture2D" uid="uid://bkapw3s44du3o" path="res://assets/heina.png" id="6_8x87a"]
 [ext_resource type="Texture2D" uid="uid://2vcflied4f4y" path="res://assets/Sign.png" id="7_8x87a"]
-[ext_resource type="PackedScene" uid="uid://cxe8p1h70icgh" path="res://assets/player.tscn" id="7_bmsap"]
+[ext_resource type="PackedScene" uid="uid://uhg7rhgmxcvr" path="res://assets/player.tscn" id="7_bmsap"]
 [ext_resource type="Script" uid="uid://djg4204j6a6wi" path="res://level3transition.gd" id="9_ci4mn"]
-[ext_resource type="Texture2D" uid="uid://l6nrc0rw4a8e" path="res://assets/Background.png" id="9_sotx7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lcx6"]
 texture = ExtResource("1_o2ccw")
@@ -64,12 +63,7 @@ tile_set = SubResource("TileSet_mu84n")
 
 [node name="Player" parent="." instance=ExtResource("7_bmsap")]
 z_index = -1
-position = Vector2(-57, 20)
-
-[node name="Background" type="Sprite2D" parent="Player"]
-z_index = -1
-position = Vector2(304, 356)
-texture = ExtResource("9_sotx7")
+position = Vector2(-303, -68)
 
 [node name="Area2D" type="Area2D" parent="." groups=["transfer"]]
 position = Vector2(1077, 286)
