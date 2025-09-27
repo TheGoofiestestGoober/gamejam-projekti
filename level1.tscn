@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cg4j3dpgurur7" path="res://deep_grund.png" id="5_usj0q"]
 [ext_resource type="Texture2D" uid="uid://2vcflied4f4y" path="res://assets/Sign.png" id="6_i2041"]
 [ext_resource type="Texture2D" uid="uid://5oebc87xc360" path="res://assets/Flower.png" id="7_hx44q"]
-[ext_resource type="PackedScene" uid="uid://uhg7rhgmxcvr" path="res://assets/player.tscn" id="7_xy4tn"]
+[ext_resource type="PackedScene" path="res://assets/player.tscn" id="7_xy4tn"]
 [ext_resource type="Texture2D" uid="uid://bkapw3s44du3o" path="res://assets/heina.png" id="8_n8vhr"]
 [ext_resource type="Script" uid="uid://t3qxj21s5qee" path="res://area_2d.gd" id="8_xy4tn"]
 [ext_resource type="Texture2D" uid="uid://kbmlnje6jgau" path="res://assets/tree.png" id="9_eqrsh"]
@@ -60,6 +60,7 @@ texture = ExtResource("9_eqrsh")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nauge"]
 texture = ExtResource("10_3l65w")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_3l65w"]
 physics_layer_0/collision_layer = 1
