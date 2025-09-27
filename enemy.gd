@@ -5,6 +5,7 @@ const speed = 50
 var direction = 1
 var hasSwitchedDirection = false
 
+
 func _ready():
 	var ray_left = $RayCastLeft
 	var ray_right = $RayCastRight
