@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bmofka7b8mof0"]
+[gd_scene load_steps=32 format=4 uid="uid://bmofka7b8mof0"]
 
 [ext_resource type="Script" uid="uid://bmcyt10fr1ug1" path="res://level_4.gd" id="1_dguho"]
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_g1tnb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://gfesdyh3u6ro" path="res://assets/level 2 grund.png" id="3_bp1i4"]
 [ext_resource type="Texture2D" uid="uid://yh4itcp3r0fd" path="res://assets/Lava.png" id="3_sx4db"]
 [ext_resource type="Texture2D" uid="uid://kswvthnoec35" path="res://assets/deep_grund.png" id="4_bvvno"]
+[ext_resource type="Texture2D" uid="uid://ckgk7cng15n22" path="res://assets/Konfetti.png" id="5_0bk12"]
 [ext_resource type="Texture2D" uid="uid://2vcflied4f4y" path="res://assets/Sign.png" id="5_bvvno"]
 [ext_resource type="PackedScene" uid="uid://uhg7rhgmxcvr" path="res://assets/player.tscn" id="5_pklw6"]
 [ext_resource type="Texture2D" uid="uid://5oebc87xc360" path="res://assets/Flower.png" id="6_yxclo"]
@@ -14,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cdnqfoakthtk1" path="res://assets/Mushroom.png" id="9_fx4lf"]
 [ext_resource type="PackedScene" uid="uid://7qqvhmtulr8c" path="res://enemy.tscn" id="12_7lf1v"]
 [ext_resource type="Texture2D" uid="uid://hviplbcwofwp" path="res://assets/Background2.png" id="14_p2trt"]
-[ext_resource type="PackedScene" uid="uid://cl147jkxpgxvq" path="res://boss.tscn" id="15_n01hv"]
-[ext_resource type="Script" uid="uid://cvlpkmibwu284" path="res://level4transition.gd" id="16_7odde"]
+[ext_resource type="PackedScene" path="res://boss.tscn" id="15_n01hv"]
+[ext_resource type="Script" path="res://level4transition.gd" id="16_7odde"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7lf1v"]
 texture = ExtResource("1_g1tnb")
@@ -30,6 +31,9 @@ texture = ExtResource("2_pklw6")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2trt"]
 texture = ExtResource("3_sx4db")
 0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vy5se"]
+texture = ExtResource("5_0bk12")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n01hv"]
 texture = ExtResource("3_bp1i4")
@@ -79,6 +83,7 @@ sources/7 = SubResource("TileSetAtlasSource_d0b6t")
 sources/8 = SubResource("TileSetAtlasSource_x8n7k")
 sources/9 = SubResource("TileSetAtlasSource_pbbpa")
 sources/10 = SubResource("TileSetAtlasSource_p2trt")
+sources/12 = SubResource("TileSetAtlasSource_vy5se")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bk12"]
 size = Vector2(82, 82)
