@@ -81,6 +81,14 @@ tile_set = SubResource("TileSet_mu84n")
 [node name="Player" parent="." instance=ExtResource("7_bmsap")]
 position = Vector2(-303, -68)
 
+[node name="Area2D2" type="Area2D" parent="." groups=["transfer"]]
+position = Vector2(-1108, 287)
+script = ExtResource("9_ci4mn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" groups=["transfer"]]
+position = Vector2(24, -5)
+shape = SubResource("RectangleShape2D_0m7xm")
+
 [node name="Area2D" type="Area2D" parent="." groups=["transfer"]]
 position = Vector2(1077, 286)
 script = ExtResource("9_ci4mn")
