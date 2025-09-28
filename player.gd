@@ -10,6 +10,13 @@ var Sword_On_Cooldown = false
 var facingDirection = 0
 var lastFaced = 1
 
+var KalleWalkingLeft = preload("res://assets/Kalle walking left.png")
+var KalleWalkingRight = preload("res://assets/Kalle walking right.png")
+var Kalle = preload("res://assets/Kalle_kavelija.png")
+
+@onready var KalleAnim = $Sprite2D
+
+
 func _ready() -> void:
 	$Sword.visible = false
 	$Sword/Area2D/CollisionShape2D.disabled = true
@@ -82,16 +89,21 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("left") and level.canGoLeft:
 		velocity.x = left * SPEED
 		facingDirection = -1
+		KalleAnim = KalleWalkingLeft
 		lastFaced = -1
 		
 	elif Input.is_action_pressed("right") and level.canGoRight:
 		velocity.x = right * SPEED
 		facingDirection = 1
+		KalleAnim = KalleWalkingRight
 		lastFaced = 1
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		facingDirection = 0
+		KalleAnim = Kalle
+		
+	$Sprite2D.texture = KalleAnim
 
 	move_and_slide()
 
