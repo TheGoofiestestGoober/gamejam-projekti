@@ -12,7 +12,7 @@ func DisableGoingRight():
 	canGoRight = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var sacrificeMenu = preload("res://SacrificeMenu2.tscn")
+	var sacrificeMenu = preload("res://FinalSacrificeMenu.tscn")
 	var menuInstance = sacrificeMenu.instantiate()
 	add_child(menuInstance)
 

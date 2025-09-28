@@ -10,11 +10,7 @@ var Sword_On_Cooldown = false
 var facingDirection = 0
 var lastFaced = 1
 
-var KalleWalkingLeft = preload("res://assets/Kalle walking left.png")
-var KalleWalkingRight = preload("res://assets/Kalle walking right.png")
-var Kalle = preload("res://assets/Kalle_kavelija.png")
 
-@onready var KalleAnim = $Sprite2D
 
 
 func _ready() -> void:

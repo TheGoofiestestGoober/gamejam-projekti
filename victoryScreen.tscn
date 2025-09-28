@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dhghu7m6u1mlb"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 655.0
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 171.0
+offset_right = 1067.0
+offset_bottom = 444.0
+theme_override_font_sizes/font_size = 200
+text = "YOU WON"
+horizontal_alignment = 1
+vertical_alignment = 1

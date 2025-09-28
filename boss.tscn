@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl147jkxpgxvq"]
+
+[ext_resource type="Texture2D" uid="uid://cf3inw1vfrned" path="res://assets/IsoBoss.png" id="1_0bnu1"]
+[ext_resource type="Script" uid="uid://b52dknp7t25k3" path="res://boss.gd" id="1_6xxrv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xxrv"]
+size = Vector2(20.426914, 26.845554)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skx2t"]
+size = Vector2(150, 34)
+
+[node name="Boss" type="CharacterBody2D"]
+script = ExtResource("1_6xxrv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_0bnu1")
+
+[node name="Killarea" type="Area2D" parent="." groups=["Enemy"]]
+position = Vector2(68, 7.000001)
+scale = Vector2(4.9200006, 1)
+
+[node name="EnemyHitbox" type="CollisionShape2D" parent="Killarea" groups=["Enemy"]]
+position = Vector2(-13.862397, 9.67355)
+scale = Vector2(1.5761724, 1.3911839)
+shape = SubResource("RectangleShape2D_6xxrv")
+
+[node name="RayCastDown2" type="RayCast2D" parent="."]
+position = Vector2(83, 23)
+target_position = Vector2(0, 15)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(68, 24)
+target_position = Vector2(11, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
+position = Vector2(1, 17)
+shape = SubResource("RectangleShape2D_skx2t")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(3, 1)
+
+[connection signal="area_entered" from="Killarea" to="." method="_on_killarea_area_entered"]
