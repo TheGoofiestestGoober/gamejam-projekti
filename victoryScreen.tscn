@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://dhghu7m6u1mlb"]
+[gd_scene load_steps=4 format=3 uid="uid://dpllutongfg1c"]
+
+[ext_resource type="Texture2D" uid="uid://ckgk7cng15n22" path="res://assets/Konfetti.png" id="1_m0r8o"]
+[ext_resource type="Texture2D" uid="uid://5oebc87xc360" path="res://assets/Flower.png" id="2_pnrnw"]
+[ext_resource type="Texture2D" uid="uid://oxw1h23g4sqf" path="res://assets/Grappling hook.png" id="3_voms8"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -10,16 +14,77 @@ offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
-offset_right = 1158.0
-offset_bottom = 655.0
+offset_left = -99.0
+offset_top = -16.0
+offset_right = 1059.0
+offset_bottom = 639.0
 
 [node name="Label" type="Label" parent="Control/Panel"]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 171.0
-offset_right = 1067.0
-offset_bottom = 444.0
+offset_left = 95.0
+offset_top = 155.0
+offset_right = 1074.0
+offset_bottom = 428.0
 theme_override_font_sizes/font_size = 200
 text = "YOU WON"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Konfetti" type="Sprite2D" parent="Control"]
+position = Vector2(8.500005, 89.5)
+scale = Vector2(12.812501, 11.3125)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti2" type="Sprite2D" parent="Control"]
+position = Vector2(-46.499996, 238.5)
+scale = Vector2(6.0624995, 7.9375005)
+texture = ExtResource("1_m0r8o")
+
+[node name="Flower" type="Sprite2D" parent="Control"]
+position = Vector2(788, 549.00006)
+scale = Vector2(8.875, 8.75)
+texture = ExtResource("2_pnrnw")
+
+[node name="Konfetti" type="Sprite2D" parent="."]
+position = Vector2(261.50003, 502.5)
+scale = Vector2(27.812502, 16.687504)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti2" type="Sprite2D" parent="."]
+position = Vector2(-28, 469)
+scale = Vector2(9, 20.671877)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti3" type="Sprite2D" parent="."]
+position = Vector2(621, 502.49997)
+scale = Vector2(19, 15.312498)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti4" type="Sprite2D" parent="."]
+position = Vector2(907.9999, 87)
+scale = Vector2(18.937502, 13.1875)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti5" type="Sprite2D" parent="."]
+position = Vector2(912.50006, 504)
+scale = Vector2(17.562506, 15.75)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti6" type="Sprite2D" parent="."]
+position = Vector2(595, 89.00001)
+scale = Vector2(21.625, 12.625)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti7" type="Sprite2D" parent="."]
+position = Vector2(270, 95.499985)
+scale = Vector2(19.75, 11.812498)
+texture = ExtResource("1_m0r8o")
+
+[node name="Konfetti8" type="Sprite2D" parent="."]
+position = Vector2(1012.25, 282.99997)
+scale = Vector2(5.5312495, 11.374999)
+texture = ExtResource("1_m0r8o")
+
+[node name="GrapplingHook" type="Sprite2D" parent="."]
+position = Vector2(418, 462)
+texture = ExtResource("3_voms8")
