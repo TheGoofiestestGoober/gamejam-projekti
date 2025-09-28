@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -400.0
 
 
 var Sword_On_Cooldown = false
+var facingDirection = 0
+var lastFaced = 1
 
 func _ready() -> void:
 	$Sword.visible = false
@@ -21,7 +23,15 @@ func die():
 	get_tree().reload_current_scene()
 	
 func attack():
+	var swordPos = $Sword.position
 	
+	if lastFaced == 1:
+		$Sword.scale.x = 1
+		swordPos = $ShankPositionRight.position
+	else:
+		$Sword.scale.x = -1
+		swordPos = $ShankPositionLeft.position
+	$Sword.position = swordPos
 	if not Sword_On_Cooldown:
 		$Sword.visible = true
 		$Sword/Area2D/CollisionShape2D.disabled = false
@@ -71,10 +81,17 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("left") and level.canGoLeft:
 		velocity.x = left * SPEED
+		facingDirection = -1
+		lastFaced = -1
+		
 	elif Input.is_action_pressed("right") and level.canGoRight:
 		velocity.x = right * SPEED
+		facingDirection = 1
+		lastFaced = 1
+		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		facingDirection = 0
 
 	move_and_slide()
 
