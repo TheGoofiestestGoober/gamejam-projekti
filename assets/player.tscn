@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://uhg7rhgmxcvr"]
+[gd_scene load_steps=13 format=3 uid="uid://uhg7rhgmxcvr"]
 
 [ext_resource type="Script" uid="uid://drakey14ku550" path="res://player.gd" id="1_3mip4"]
 [ext_resource type="Texture2D" uid="uid://bcgn552mvnwrk" path="res://assets/Kalle_kavelija.png" id="2_3mip4"]
 [ext_resource type="PackedScene" uid="uid://doem7bgx61r73" path="res://sword.tscn" id="3_insbl"]
+[ext_resource type="Texture2D" uid="uid://b0yvwltt8myay" path="res://assets/Kalle walking left.png" id="4_mxi64"]
+[ext_resource type="Texture2D" uid="uid://b3rwqdewbs8dx" path="res://assets/Kalle walking left2.png" id="5_jeibo"]
+[ext_resource type="Texture2D" uid="uid://cp3whq4t28arw" path="res://assets/Kalle walking right.png" id="5_nsdob"]
+[ext_resource type="Texture2D" uid="uid://bkanv4key6utg" path="res://assets/Kalle walking left3.png" id="6_cn88q"]
+[ext_resource type="Texture2D" uid="uid://yihycpd73xwe" path="res://assets/Kalle walking right2.png" id="8_nknpd"]
+[ext_resource type="Texture2D" uid="uid://dxcwy167avlv2" path="res://assets/Kalle walking right3.png" id="9_7rrun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avjxg"]
 size = Vector2(9, 18)
@@ -10,13 +16,48 @@ size = Vector2(9, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_insbl"]
 size = Vector2(7, 18)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_yceh7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3mip4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.41,
+"texture": ExtResource("4_mxi64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jeibo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cn88q")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.41,
+"texture": ExtResource("5_nsdob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nknpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7rrun")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
 script = ExtResource("1_3mip4")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(350, 361.99997)
-texture = ExtResource("2_3mip4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(358, 361)
@@ -42,5 +83,11 @@ position = Vector2(360, 362)
 
 [node name="ShankPositionLeft" type="Marker2D" parent="."]
 position = Vector2(338, 362)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(349, 361)
+sprite_frames = SubResource("SpriteFrames_yceh7")
+animation = &"walk_left"
+frame_progress = 0.2511869
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
