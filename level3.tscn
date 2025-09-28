@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bme63xau32rb1"]
+[gd_scene load_steps=26 format=4 uid="uid://bme63xau32rb1"]
 
 [ext_resource type="Script" uid="uid://bldtgyow6sgdc" path="res://level_3.gd" id="1_7oc4e"]
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_o2ccw"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://djg4204j6a6wi" path="res://level3transition.gd" id="9_ci4mn"]
 [ext_resource type="Texture2D" uid="uid://h6b4dsqjgpad" path="res://assets/Streetlight.png" id="9_sotx7"]
 [ext_resource type="PackedScene" uid="uid://7qqvhmtulr8c" path="res://enemy.tscn" id="12_ymh28"]
+[ext_resource type="Texture2D" uid="uid://hviplbcwofwp" path="res://assets/Background2.png" id="14_siwpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lcx6"]
 texture = ExtResource("1_o2ccw")
@@ -128,3 +129,48 @@ position = Vector2(-808, 411)
 [node name="Enemy9" parent="." instance=ExtResource("12_ymh28")]
 z_index = 1
 position = Vector2(-935, 346)
+
+[node name="Background2" type="Sprite2D" parent="."]
+z_index = -50
+position = Vector2(-741, -82)
+texture = ExtResource("14_siwpi")
+
+[node name="Background2" type="Sprite2D" parent="Background2"]
+z_index = -50
+position = Vector2(1130, -7)
+texture = ExtResource("14_siwpi")
+
+[node name="Background2" type="Sprite2D" parent="Background2/Background2"]
+z_index = -50
+position = Vector2(1130, -7)
+texture = ExtResource("14_siwpi")
+
+[node name="Background3" type="Sprite2D" parent="Background2"]
+z_index = -50
+position = Vector2(3, 643)
+texture = ExtResource("14_siwpi")
+
+[node name="Background2" type="Sprite2D" parent="Background2/Background3"]
+z_index = -50
+position = Vector2(1130, -7)
+texture = ExtResource("14_siwpi")
+
+[node name="Background2" type="Sprite2D" parent="Background2/Background3/Background2"]
+z_index = -50
+position = Vector2(1130, -7)
+texture = ExtResource("14_siwpi")
+
+[node name="Background3" type="Sprite2D" parent="Background2/Background3"]
+z_index = -50
+position = Vector2(3, 643)
+texture = ExtResource("14_siwpi")
+
+[node name="Background2" type="Sprite2D" parent="Background2/Background3/Background3"]
+z_index = -50
+position = Vector2(1130, -7)
+texture = ExtResource("14_siwpi")
+
+[node name="Background2" type="Sprite2D" parent="Background2/Background3/Background3/Background2"]
+z_index = -50
+position = Vector2(1130, -7)
+texture = ExtResource("14_siwpi")
