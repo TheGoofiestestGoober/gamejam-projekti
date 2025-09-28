@@ -186,3 +186,10 @@ texture = ExtResource("14_mw4xc")
 z_index = -10
 position = Vector2(1151, 0)
 texture = ExtResource("14_mw4xc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1092.0
+offset_top = 180.0
+offset_right = -943.0
+offset_bottom = 203.0
+text = "Restart level with R"
