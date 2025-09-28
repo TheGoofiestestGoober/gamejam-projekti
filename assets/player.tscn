@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://uhg7rhgmxcvr"]
+[gd_scene load_steps=15 format=3 uid="uid://uhg7rhgmxcvr"]
 
 [ext_resource type="Script" uid="uid://drakey14ku550" path="res://player.gd" id="1_3mip4"]
 [ext_resource type="Texture2D" uid="uid://bcgn552mvnwrk" path="res://assets/Kalle_kavelija.png" id="2_3mip4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://yihycpd73xwe" path="res://assets/Kalle walking right2.png" id="8_nknpd"]
 [ext_resource type="Texture2D" uid="uid://dxcwy167avlv2" path="res://assets/Kalle walking right3.png" id="9_7rrun"]
 [ext_resource type="AudioStream" uid="uid://57rwtqur0lf" path="res://assets/Failsound.wav" id="10_cn88q"]
+[ext_resource type="AudioStream" uid="uid://dptj2bj5rjngc" path="res://assets/sword-sound-260274.mp3" id="11_nknpd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avjxg"]
 size = Vector2(9, 18)
@@ -93,5 +94,8 @@ frame_progress = 0.45262372
 
 [node name="TrySacrificedAbility" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_cn88q")
+
+[node name="SwordSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_nknpd")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
