@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://jpbn2tqghcgn"]
+
+[ext_resource type="PackedScene" uid="uid://ckka3y8ytbe80" path="res://sacrifice_menu.tscn" id="1_h7ymv"]
+[ext_resource type="Texture2D" uid="uid://cbrqyashwstxn" path="res://assets/Sacrifices.png" id="2_4e4ok"]
+[ext_resource type="Texture2D" uid="uid://6omi5i0ji86n" path="res://assets/NotLeft.png" id="3_abbnx"]
+[ext_resource type="Texture2D" uid="uid://csaatgiatnmoa" path="res://assets/NotRight.png" id="4_5ji2p"]
+[ext_resource type="Texture2D" uid="uid://7jq7go4n7kmk" path="res://assets/NotSword.png" id="5_t7cro"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="sacrifice menu" parent="." instance=ExtResource("1_h7ymv")]
+
+[node name="Panel2" type="Panel" parent="sacrifice menu"]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 646.0
+
+[node name="Sacrifices2" type="Sprite2D" parent="sacrifice menu"]
+position = Vector2(589, 77)
+texture = ExtResource("2_4e4ok")
+
+[node name="TextureButton4" type="TextureButton" parent="sacrifice menu"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 150.0
+offset_right = 371.0
+offset_bottom = 550.0
+texture_normal = ExtResource("3_abbnx")
+
+[node name="TextureButton5" type="TextureButton" parent="sacrifice menu"]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 150.0
+offset_right = 1089.0
+offset_bottom = 550.0
+texture_normal = ExtResource("4_5ji2p")
+
+[node name="TextureButton6" type="TextureButton" parent="sacrifice menu"]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 150.0
+offset_right = 729.0
+offset_bottom = 550.0
+texture_normal = ExtResource("5_t7cro")
+
+[connection signal="pressed" from="sacrifice menu/TextureButton4" to="sacrifice menu" method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="sacrifice menu/TextureButton5" to="sacrifice menu" method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="sacrifice menu/TextureButton6" to="sacrifice menu" method="_on_texture_button_6_pressed"]

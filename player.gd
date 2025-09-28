@@ -43,12 +43,14 @@ func async_hide_sword() -> void:
 
 func _physics_process(delta: float) -> void:
 	
+	var level = get_tree().current_scene
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		if position.y >= 525:
 			die()
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") and level.swordIsUsable:
 		attack()	
 			
 
@@ -58,9 +60,19 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
+	var left = -1
+	var right = 1
+	
+	#var direction := Input.get_axis("left", "right")
+	#if direction:
+	#	velocity.x = left * SPEED
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if Input.is_action_pressed("left") and level.canGoLeft:
+		velocity.x = left * SPEED
+	elif Input.is_action_pressed("right") and level.canGoRight:
+		velocity.x = right * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -68,7 +80,5 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("hi")
 	if not area.is_in_group("transfer") and not area.is_in_group("sword"):
-		print("hi")
 		die()

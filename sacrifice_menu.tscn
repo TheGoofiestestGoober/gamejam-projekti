@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckka3y8ytbe80"]
+
+[ext_resource type="Texture2D" uid="uid://cbrqyashwstxn" path="res://assets/Sacrifices.png" id="1_dvvk4"]
+[ext_resource type="Script" uid="uid://chludyguce662" path="res://sacrifice_menu.gd" id="1_xaj1s"]
+[ext_resource type="Texture2D" uid="uid://6omi5i0ji86n" path="res://assets/NotLeft.png" id="2_xaj1s"]
+[ext_resource type="Texture2D" uid="uid://csaatgiatnmoa" path="res://assets/NotRight.png" id="3_6gur8"]
+[ext_resource type="Texture2D" uid="uid://7jq7go4n7kmk" path="res://assets/NotSword.png" id="4_xp7vt"]
+
+[node name="sacrifice menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xaj1s")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 646.0
+
+[node name="Sacrifices" type="Sprite2D" parent="."]
+position = Vector2(589, 77)
+texture = ExtResource("1_dvvk4")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 150.0
+offset_right = 371.0
+offset_bottom = 550.0
+texture_normal = ExtResource("2_xaj1s")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 150.0
+offset_right = 1089.0
+offset_bottom = 550.0
+texture_normal = ExtResource("3_6gur8")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 150.0
+offset_right = 729.0
+offset_bottom = 550.0
+texture_normal = ExtResource("4_xp7vt")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]

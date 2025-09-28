@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=4 uid="uid://bmofka7b8mof0"]
+[gd_scene load_steps=26 format=4 uid="uid://bmofka7b8mof0"]
 
+[ext_resource type="Script" uid="uid://bmcyt10fr1ug1" path="res://level_4.gd" id="1_dguho"]
 [ext_resource type="Texture2D" uid="uid://d1cji5rkg88rs" path="res://assets/grund.png" id="1_g1tnb"]
 [ext_resource type="Texture2D" uid="uid://b5qgo1h87jl47" path="res://assets/stone.png" id="2_pklw6"]
 [ext_resource type="Texture2D" uid="uid://gfesdyh3u6ro" path="res://assets/level 2 grund.png" id="3_bp1i4"]
@@ -77,6 +78,7 @@ sources/9 = SubResource("TileSetAtlasSource_pbbpa")
 sources/10 = SubResource("TileSetAtlasSource_p2trt")
 
 [node name="Node2" type="Node"]
+script = ExtResource("1_dguho")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 1
