@@ -65,6 +65,9 @@ func _physics_process(delta: float) -> void:
 			die()
 	if Input.is_action_just_pressed("attack") and level.swordIsUsable:
 		attack()	
+	elif Input.is_action_just_pressed("attack") and not level.swordIsUsable:
+		if not $TrySacrificedAbility.playing:
+			$TrySacrificedAbility.play()	
 			
 
 	# Handle jump.
@@ -84,17 +87,24 @@ func _physics_process(delta: float) -> void:
 		facingDirection = -1
 		$AnimatedSprite2D.play("walk_left")
 		lastFaced = -1
+	elif Input.is_action_just_pressed("left") and not level.canGoLeft:
+		if not $TrySacrificedAbility.playing:
+			$TrySacrificedAbility.play()	
 		
 	elif Input.is_action_pressed("right") and level.canGoRight:
 		velocity.x = right * SPEED
 		facingDirection = 1
 		$AnimatedSprite2D.play("walk_right")
 		lastFaced = 1
+	elif Input.is_action_just_pressed("right") and not level.canGoRight:
+		if not $TrySacrificedAbility.playing:
+			$TrySacrificedAbility.play()	
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		facingDirection = 0
 		$AnimatedSprite2D.play("default")
+		
 		
 
 	move_and_slide()
