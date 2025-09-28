@@ -86,21 +86,20 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("left") and level.canGoLeft:
 		velocity.x = left * SPEED
 		facingDirection = -1
-		KalleAnim = KalleWalkingLeft
+		$AnimatedSprite2D.play("walk_left")
 		lastFaced = -1
 		
 	elif Input.is_action_pressed("right") and level.canGoRight:
 		velocity.x = right * SPEED
 		facingDirection = 1
-		KalleAnim = KalleWalkingRight
+		$AnimatedSprite2D.play("walk_right")
 		lastFaced = 1
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		facingDirection = 0
-		KalleAnim = Kalle
+		$AnimatedSprite2D.play("default")
 		
-	$Sprite2D.texture = KalleAnim
 
 	move_and_slide()
 
