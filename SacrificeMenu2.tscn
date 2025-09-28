@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://jpbn2tqghcgn"]
+[gd_scene load_steps=9 format=3 uid="uid://jpbn2tqghcgn"]
 
 [ext_resource type="PackedScene" uid="uid://ckka3y8ytbe80" path="res://sacrifice_menu.tscn" id="1_h7ymv"]
 [ext_resource type="Texture2D" uid="uid://cbrqyashwstxn" path="res://assets/Sacrifices.png" id="2_4e4ok"]
 [ext_resource type="Texture2D" uid="uid://6omi5i0ji86n" path="res://assets/NotLeft.png" id="3_abbnx"]
+[ext_resource type="Texture2D" uid="uid://drmylworw0231" path="res://assets/NotLeftSelected.png" id="4_4e4ok"]
 [ext_resource type="Texture2D" uid="uid://csaatgiatnmoa" path="res://assets/NotRight.png" id="4_5ji2p"]
 [ext_resource type="Texture2D" uid="uid://7jq7go4n7kmk" path="res://assets/NotSword.png" id="5_t7cro"]
+[ext_resource type="Texture2D" uid="uid://c1j8tsqhs24md" path="res://assets/NotRightSelected.png" id="6_5ji2p"]
+[ext_resource type="Texture2D" uid="uid://bt7s6lsycnr3y" path="res://assets/NotSwordSelected.png" id="8_t7cro"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -26,6 +29,7 @@ offset_top = 150.0
 offset_right = 371.0
 offset_bottom = 550.0
 texture_normal = ExtResource("3_abbnx")
+texture_hover = ExtResource("4_4e4ok")
 
 [node name="TextureButton5" type="TextureButton" parent="sacrifice menu"]
 layout_mode = 0
@@ -34,6 +38,7 @@ offset_top = 150.0
 offset_right = 1089.0
 offset_bottom = 550.0
 texture_normal = ExtResource("4_5ji2p")
+texture_hover = ExtResource("6_5ji2p")
 
 [node name="TextureButton6" type="TextureButton" parent="sacrifice menu"]
 layout_mode = 0
@@ -42,6 +47,7 @@ offset_top = 150.0
 offset_right = 729.0
 offset_bottom = 550.0
 texture_normal = ExtResource("5_t7cro")
+texture_hover = ExtResource("8_t7cro")
 
 [connection signal="pressed" from="sacrifice menu/TextureButton4" to="sacrifice menu" method="_on_texture_button_4_pressed"]
 [connection signal="pressed" from="sacrifice menu/TextureButton5" to="sacrifice menu" method="_on_texture_button_5_pressed"]

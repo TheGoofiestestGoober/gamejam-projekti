@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_texture_button_4_pressed() -> void:
-	print("hi")
 	var level = get_tree().current_scene
 	if level.has_method("DisableGoingLeft"):
 		level.DisableGoingLeft()
@@ -20,14 +19,12 @@ func _on_texture_button_4_pressed() -> void:
 
 
 func _on_texture_button_5_pressed() -> void:
-	print("hello")
 	var level = get_tree().current_scene
 	if level.has_method("DisableGoingRight"):
 		level.DisableGoingRight()
 		visible = false
 
 func _on_texture_button_6_pressed() -> void:
-	print("ahoy")
 	var level = get_tree().current_scene
 	if level.has_method("DisableSwordUsage"):
 		level.DisableSwordUsage()
